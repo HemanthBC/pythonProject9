@@ -26,6 +26,6 @@ def odds_or_evens(boolean, my_list):
   return new_list
 
 print(odds_or_evens(False, [13, 22, 8, 31]))
-#testing comments
+
 # if False Result: [13,31]
 # if True Result: [22,8]

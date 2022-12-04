@@ -1,31 +1,17 @@
-####################################################################################################################
-#                                     Functions - Lab Exercise 2
-#
-# Write a function called odds_or_evens that takes a boolean and a list of integers as parameters.
-# If the boolean parameter is True, return a list of only even numbers.
-# If the boolean parameter isFalse, return a list of only odd numbers.
-#
-#  Expected Output:
-#  If the function call is odds_or_evens(True, [8, 13, 22, 31]), the the function would return [22, 8]
-#  If the function call is odds_or_evens(False, [8, 13, 22, 31]), the the function would return [13, 31]
-#
-####################################################################################################################
+# Recursion Exercise 1
+# Problem
+# Write a recursive function called recursive_sum that takes an integer as a parameter. Return the sum of all integers between 0 and the number passed to recursive_sum.
+# Expected Output
+# •	If the function call is recursive_sum(5), then the function would return 15
+# •	If the function call is recursive_sum(10), then the function would return 55
 
-def odds_or_evens(boolean, my_list):
-  new_list = []
-  if boolean:
-    for i in my_list:
-      if i % 2 == 0:
-        new_list = new_list + [i]
 
-  else:
-    for i in my_list:
-      if i % 2 != 0:
-        new_list = new_list + [i]
+def recursive_sum(n):
+    if n < 1:
+        return 0
 
-  return new_list
+    else:
+        return n + recursive_sum(n - 1)
 
-print(odds_or_evens(False, [13, 22, 8, 31]))
-
-# if False Result: [13,31]
-# if True Result: [22,8]
+print(recursive_sum(10))
+# gives 55 as answer
